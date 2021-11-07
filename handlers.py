@@ -1,21 +1,16 @@
 import os
-from asyncio import sleep
-
-import requests
-from aiogram.dispatcher import FSMContext
-from aiogram.dispatcher.filters import Text, Command, RegexpCommandsFilter
-from aiogram.dispatcher.filters.state import StatesGroup, State
-from aiogram.types import Message
-from aiogram.types import ReplyKeyboardRemove
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 import json
+import requests
 
-from config import ADMIN_ID
+from aiogram.dispatcher.filters import Command, RegexpCommandsFilter
+from aiogram.types import Message
+
+# from config import ADMIN_ID
 from main import bot, dp, base, conn
 from parser import get_brand, get_title
 
 
-# ADMIN_ID = os.environ["ADMIN_ID"]
+ADMIN_ID = os.environ["ADMIN_ID"]
 
 
 def user_id(message):

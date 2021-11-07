@@ -1,4 +1,5 @@
 import requests
+
 from bs4 import BeautifulSoup
 
 
@@ -28,7 +29,3 @@ def get_title(*args):
     title = soup.find_all('span', {'data-link': 'text{:product^goodsName}', })[0].text
     return title
 
-
-if __name__ == '__main__':
-    print(get_brand('9842676'), sep='\n')
-    print(get_title('9842676'), sep='\n')
