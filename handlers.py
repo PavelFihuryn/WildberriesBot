@@ -54,6 +54,8 @@ async def echo(message: Message):
     await message.answer(text=text)
 
 
+# Пример сохранения полученных данных в БД.
+# Команда /save не выполнится, т.к. будет перехвачена выше
 def save_in_db(code, json_data):
     base.execute("INSERT INTO products(product_id, product_info) VALUES (?, ?)", (code, json.dumps(json_data)))
     conn.commit()
