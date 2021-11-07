@@ -32,4 +32,4 @@ if __name__ == '__main__':
     executor.start_webhook(listen="0.0.0.0",
                            port=int(PORT),
                            url_path=BOT_TOKEN)
-    executor.bot.setWebhook('https://kufar-find-bot.herokuapp.com/' + BOT_TOKEN)
+    executor.bot.setWebhook(' https://wildberries-parser-bot.herokuapp.com/' + BOT_TOKEN)
